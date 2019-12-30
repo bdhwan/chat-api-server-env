@@ -13,7 +13,7 @@ ADD check.sh /home/check.sh
 ADD check_reload.sh /home/check_reload.sh
 
 WORKDIR /home
-HEALTHCHECK --interval=30s CMD node healthcheck.js
+HEALTHCHECK --interval=60s CMD node healthcheck.js
 EXPOSE 8080
 ENTRYPOINT ["/bin/sh", "check.sh"]
 
